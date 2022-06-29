@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(238, 242, 247);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#total {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 20px;
+}
+
+.list-refresh {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20px;
+  align-items: center;
+}
+
+#list {
+  border: 1px solid grey;
+  margin-top: 30px;
+}
+
+#your {
+  display: flex;
+  flex-direction: column;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
