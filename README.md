@@ -78,7 +78,7 @@ Slack: https://microverse-students.slack.com/team/U039GCFRK9B
 LinkedIn: https://www.linkedin.com/in/dario-alessio-3a3b7911b
 
 
-## 🤝 Contributing
+## 🤝 Contributing:
 
 Contributions, issues, and feature requests are welcome!
 
