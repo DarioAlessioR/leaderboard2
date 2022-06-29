@@ -11,28 +11,33 @@
   <body>
     <h1>Leaderboard</h1>
 
-    <div>
-      <div>
-        <h3>Recent scores</h3>
-        <button id="refresh">Refresh</button>
-      </div>  
+    <div id="total">
+
+      <div class="list-refresh">
+        <div class="head">
+          <h2>Recent scores</h2>
+          <button id="refresh">Refresh</button>
+        </div>  
         <div id="list"></div>
-    </div>
-
-    <div id="your">
-      <h3>Add your score</h3>
-      <div id="form">
-        <input type="text" name="name" id="name" autocomplete="off"
-        required placeholder="Type your name" />
-
-        <input type="text" name="score" id="score" autocomplete="off"
-        required placeholder="Type your score" />
-            
-        <div id="message"></div>
-        
-        <button type="button" id="submit">Submit</button>
-            
       </div>
+
+      <div id="your">
+        <h2>Add your score</h2>
+        <div id="form">
+          <input type="text" name="name" id="name" autocomplete="off"
+          required placeholder="Type your name" />
+
+          <input type="text" name="score" id="score" autocomplete="off"
+          required placeholder="Type your score" />
+              
+          <div id="message"></div>
+          
+          <button type="button" id="submit">Submit</button>
+              
+        </div>
+      </div>
+
     </div>
+
   </body>
 </html>
