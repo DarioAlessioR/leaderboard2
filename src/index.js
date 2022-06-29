@@ -13,6 +13,7 @@ const scorelist = [
   },
 ];
 
+// instructions to populate local storage with basic array in case it has null value inside
 const localSt = JSON.parse(localStorage.getItem('scorelist'));
 if (localSt == null) {
   localStorage.setItem('scorelist', JSON.stringify(scorelist));
@@ -20,6 +21,8 @@ if (localSt == null) {
   showscorelist(localSt);
 }
 
+// instructions to capture the input of name and score and send them to add function
+// to be inserted in array
 const submitbtn = document.getElementById('submit');
 submitbtn.addEventListener('click', () => {
   const name = document.getElementById('name');

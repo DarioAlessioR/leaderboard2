@@ -1,5 +1,8 @@
 /* eslint-disable linebreak-style */
-const scorelist = JSON.parse(localStorage.getItem('scorelist'));
+
+// const scorelist = JSON.parse(localStorage.getItem('scorelist'));
+
+// Function showscorelist builds the list and shows it on screen
 const showscorelist = (scorelist) => {
   const list = document.getElementById('list');
   list.innerHTML = '';
