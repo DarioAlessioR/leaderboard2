@@ -4,6 +4,10 @@
 
 The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
+The wireframe to be followed can be seen on this link:
+
+https://github.com/microverseinc/curriculum-javascript/blob/main/leaderboard/images/leaderboard_wireframe.png
+
 ## Requirements:
 
 -- Phase 1:
@@ -34,6 +38,11 @@ No styling is required in this phase.
 
 -- Phase 3:
 
+Improve the look and feel of the application, adding the styles of your choice.
+
+Keep the general layout of the wireframe, this is the only mandatory requirement.
+
+You can use plain CSS or any CSS framework, it's up to you.
 
 ## Built With:
 
