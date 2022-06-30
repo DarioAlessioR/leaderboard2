@@ -21,6 +21,15 @@ The leaderboard website displays scores submitted by different players. It also 
 
 -- Phase 2:
 
+Create a new game with the name of your choice by using the API.
+
+Implement the "Refresh" button (receiving data from the API and parsing the JSON).
+
+Implement the form "Submit" button (sending data to the API).
+
+Use async and await JavaScript features to consume the API.
+
+No styling is required.
 
 
 -- Phase 3:
