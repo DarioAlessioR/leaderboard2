@@ -29,7 +29,7 @@ Implement the form "Submit" button (sending data to the API).
 
 Use async and await JavaScript features to consume the API.
 
-No styling is required.
+No styling is required in this phase.
 
 
 -- Phase 3:
