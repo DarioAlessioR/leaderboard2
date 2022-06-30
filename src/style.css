@@ -1,5 +1,10 @@
 body {
-  background-color: rgb(238, 242, 247);
+  background-image: url("./images/math-transparent-20.png");
+  background-size: 90%;
+  background-color: rgb(224, 224, 240);
+  background-repeat: no-repeat;
+  background-position: right 0 top 50px;
+  background-blend-mode: soft-light;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -25,19 +30,59 @@ body {
 }
 
 #list {
-  border: 1px solid grey;
+  border: 1px solid rgb(177, 169, 169);
   margin-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .linelist {
-  border-bottom: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+}
+
+.linelist:nth-child(odd) {
+  background-color: rgb(243, 236, 236);
+}
+
+.name {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+p {
+  font-weight: 700;
 }
 
 #your {
   display: flex;
   flex-direction: column;
+  width: 30%;
+}
+
+#your h2 {
+  margin-top: 0;
+}
+
+.linebutton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#submit {
+  width: 65px;
+  font-weight: 600;
+}
+
+#refresh {
+  font-weight: 600;
 }
 
 #form {
