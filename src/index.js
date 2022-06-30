@@ -1,37 +1,81 @@
 /* eslint-disable linebreak-style */
-import add from './modules/add.js';
+
 import showscorelist from './modules/showscorelist.js';
 import './style.css';
 
-// localStorage.clear()
+// Declare variables for html elements
+const name = document.getElementById('name');
+const score = document.getElementById('score');
+const submit = document.getElementById('submit');
+const refresh = document.getElementById('refresh');
 
-const scorelist = [
-  {
-    id: 0,
-    name: '',
-    score: 0,
-  },
-];
+// Create new game in API
+const newGame = async () => {
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/',
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        name: 'Leaderboard Dario Game',
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    },
+  );
+  const id = await response.json();
 
-// instructions to populate local storage with basic array in case it has null value inside
-const localSt = JSON.parse(localStorage.getItem('scorelist'));
-if (localSt == null) {
-  localStorage.setItem('scorelist', JSON.stringify(scorelist));
-} else {
-  showscorelist(localSt);
-}
+  return id;
+};
+newGame();
 
-// instructions to capture the input of name and score and send them to add function
-// to be inserted in array
-const submitbtn = document.getElementById('submit');
-submitbtn.addEventListener('click', () => {
-  const name = document.getElementById('name');
-  const yourname = name.value;
-  const score = document.getElementById('score');
-  const yourscore = score.value;
-  add(yourname, yourscore);
+// Send data to API
+const sendData = async () => {
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3bu70kjf0It1E5FjCpPj/scores',
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        user: name.value,
+        score: score.value,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    },
+  );
+  const dataSent = await response.json();
+  return dataSent;
+};
+
+// Give submit button atribute to call functuon sendData on click
+// Clear value from input fields after calling sendData
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  sendData();
   name.value = '';
   score.value = '';
 });
 
-export default scorelist;
+// Get data from API
+const receiveData = async () => {
+  const response = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/3bu70kjf0It1E5FjCpPj/scores',
+    {
+      method: 'GET',
+      header: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    },
+  );
+  const gameScore = await response.json();
+  // If data receive from API is not null, call function showscorelist to print data on screen
+  if (gameScore !== null) {
+    showscorelist(gameScore.result);
+  }
+};
+
+// Give to refresh button capacity to call function receiveData on click
+refresh.addEventListener('click', receiveData);
+
+receiveData();

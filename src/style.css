@@ -27,6 +27,12 @@ body {
 #list {
   border: 1px solid grey;
   margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.linelist {
+  border-bottom: 1px solid grey;
 }
 
 #your {
