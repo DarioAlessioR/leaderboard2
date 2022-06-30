@@ -9,7 +9,7 @@
   </head>
   
   <body>
-    <h1>Leaderboard</h1>
+    <h1>Leaderboard Math Game</h1>
 
     <div id="total">
 
@@ -25,15 +25,15 @@
         <h2>Add your score</h2>
         <div id="form">
           <input type="text" name="name" id="name" autocomplete="off"
-          required placeholder="Type your name" />
+          required minlength="1" maxlength="30" placeholder="Type your name" />
 
-          <input type="text" name="score" id="score" autocomplete="off"
-          required placeholder="Type your score" />
+          <input type="number" name="score" id="score" autocomplete="off"
+          required min="0" placeholder="Type your score" />
               
           <div id="message"></div>
-          
-          <button type="button" id="submit">Submit</button>
-              
+          <div class="linebutton">
+            <button type="button" id="submit">Submit</button>
+          </div>    
         </div>
       </div>
 
